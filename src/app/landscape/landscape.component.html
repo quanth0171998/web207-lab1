@@ -1,0 +1,83 @@
+<h2>Danh sách địa danh</h2>
+{{addLandscape|json}}
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label>Tên địa danh: </label>
+      <input [value]="addLandscape.name" (keyup)="addLandscape.name=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <img [src]="addLandscape.img" class="img-fluid" width="70"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Hình ảnh: </label>
+      <input [value]="addLandscape.img" (keyup)="addLandscape.img=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Diện tích: </label>
+      <input [value]="addLandscape.area" (keyup)="addLandscape.area=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Lịch sử địa danh: </label>
+      <input [value]="addLandscape.history" (keyup)="addLandscape.history=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Tên danh nhân tiêu biểu: </label>
+      <input [value]="addLandscape.namePerson" (keyup)="addLandscape.namePerson=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <img [src]="addLandscape.imgPerson" class="img-fluid"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Hình ảnh: </label>
+      <input [value]="addLandscape.imgPerson" (keyup)="addLandscape.imgPerson=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Năm sinh: </label>
+      <input [value]="addLandscape.birthday" (keyup)="addLandscape.birthday=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Năm mất: </label>
+      <input [value]="addLandscape.dateDeath" (keyup)="addLandscape.dateDeath=$event.target.value" type="text" class="form-control">
+    </div>
+    <div class="text-center">
+      <button (click)="addNewLandscape($event)" class="btn btn-sm btn-success">Thêm</button>
+      <button type="reset" class="btn btn-sm btn-success">Reset</button>
+    </div>
+    <div class="text-center">
+    </div>
+  </div>
+</div>
+<h3>Danh sách</h3>
+<table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Tên địa danh: </th>
+      <th>Hình ảnh</th>
+      <th>Diện tích</th>
+      <th>Lịch sử địa danh</th>
+      <th>Tên danh nhân tiêu biểu</th>
+      <th>Hình ảnh</th>
+      <th>Năm sinh:</th>
+      <th>Năm mất</th>
+      <th>Sửa</th>
+      <th>Xóa</th>
+    </tr>
+    <tr *ngFor="let l of landscapes">
+      <td>{{l.id}}</td>
+      <td>{{l.name}}</td>
+      <td><img [src]="l.img" width="70px"></td>
+      <td>{{l.area}}</td>
+      <td>{{l.history}}</td>
+      <td>{{l.namePerson}}</td>
+      <td><img [src]="l.imgPerson" width="70px"></td>
+      <td>{{l.birthday}}</td>
+      <td>{{l.dateDeath}}</td>
+      <td><button (click)="editLandscape(l)" class="btn btn-sm btn-danger">Sửa</button></td>
+      <td><button (click)="removeLandscape(l)" class="btn btn-sm btn-danger">Xóa</button></td>
+    </tr>
+</table>
