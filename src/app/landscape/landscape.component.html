@@ -1,7 +1,7 @@
 <h2>Danh sách địa danh</h2>
-{{addLandscape|json}}
+<form>
 <div class="row">
-  <div class="col-3">
+  <div class="col-6">
     <div class="form-group">
       <label>Tên địa danh: </label>
       <input [value]="addLandscape.name" (keyup)="addLandscape.name=$event.target.value" type="text" class="form-control">
@@ -52,10 +52,13 @@
     </div>
   </div>
 </div>
-<h3>Danh sách</h3>
-<table border="1">
+</form>
+<br>
+<div class="col-12">
+  <table class="table table-bordered table-spriped">
+  <thead class="thead-green">
     <tr>
-      <th>ID</th>
+     <th>ID</th>
       <th>Tên địa danh: </th>
       <th>Hình ảnh</th>
       <th>Diện tích</th>
@@ -67,8 +70,10 @@
       <th>Sửa</th>
       <th>Xóa</th>
     </tr>
-    <tr *ngFor="let l of landscapes">
-      <td>{{l.id}}</td>
+  </thead>
+  <tbody>
+     <tr *ngFor="let l of landscapes">
+      <td scope = "row">{{l.id}}</td>
       <td>{{l.name}}</td>
       <td><img [src]="l.img" width="70px"></td>
       <td>{{l.area}}</td>
@@ -80,4 +85,7 @@
       <td><button (click)="editLandscape(l)" class="btn btn-sm btn-danger">Sửa</button></td>
       <td><button (click)="removeLandscape(l)" class="btn btn-sm btn-danger">Xóa</button></td>
     </tr>
+  </tbody>
 </table>
+
+</div>

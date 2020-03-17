@@ -1,6 +1,7 @@
-.row{
+ .row{
   padding-left: 30px;
 }
-table{
-  width: 700px;
+.thead-green{
+  background-color: #08088A;
+  color: white;
 }

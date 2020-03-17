@@ -22,7 +22,7 @@ export class LandscapeComponent implements OnInit {
       id: 2,
       name: 'Bảo tàng vua Quang Trung',
       img: 'https://vntrip.cdn.vccloud.vn/cam-nang/wp-content/uploads/2018/03/4-bao-tang-quangtrung-vntrip-e1521702783127.jpg',
-      area: 12,
+      area: 200,
       history: 'Bình Định vốn là vùng đất gắn liền với tên tuổi của vị vua Quang Trung ngày nào. Bởi vậy, khi tới đây bạn hãy dành ra chút thời gian để ghé thăm bảo tàng vua Quang Trung để có thể hiểu biết thêm về lịch sử và vị anh hùng này nhé!',
       namePerson: 'Vua Quang Trung',
       imgPerson:'https://znews-photo.zadn.vn/w660/Uploaded/jbvunte/2018_01_04/vua_quangtrung.jpg',
@@ -33,7 +33,7 @@ export class LandscapeComponent implements OnInit {
       id: 3,
       name: 'Cầu Hàm Rồng',
       img: 'https://phongbanve.vn/public/uploads/images/images/ThanhHoa/thanhhoa-hamrong.jpg',
-      area: 12,
+      area: 40,
       history: 'Hàm Rồng cách trung tâm thành phố Thanh Hoá 4 km, ở dọc trục đường Quốc lộ 1A. Trong tương lai không xa nơi đây sẽ là khu du lịch văn hoá sinh thái hấp dẫn của Thanh Hoá. Thắng tích Hàm Rồng gồm một quần thể núi, sông kỳ tú, sơn thủy hữu tình:',
       namePerson: 'Đào Duy Từ',
       imgPerson:'https://quangbinhtourism.vn/wp-content/uploads/2019/06/dao_duy_tu.jpg',
@@ -44,7 +44,7 @@ export class LandscapeComponent implements OnInit {
       id: 4,
       name: 'Chùa Keo',
       img: 'https://timeoutvietnam.com/files/2016/04/22/6-diem-den-cuc-hap-dan-o-thai-binh-5.jpg',
-      area: 12,
+      area: 123,
       history: 'Chùa Keo tọa lạc tại xã Duy Nhất, huyện Vũ Thư là ngôi cổ tự nổi tiếng bậc nhất ở Việt Nam đã được Bộ Văn hóa công nhận là di tích lịch sử - văn hóa quốc gia. Công trình kiến trúc nổi tiếng của chùa Keo là gác chuông cao 11,04m với 3 tầng mái. Tầng một có treo một khánh đá dài 1,87m. Trên tầng hai là quả chuông được đúc năm 1686 và tầng ba là nơi có chuông đúc năm 1796.',
       namePerson: 'Trần Thủ Ðộ ',
       imgPerson:'https://znews-photo.zadn.vn/w660/Uploaded/mdf_nsozxd/2018_08_30/tran_thu_do.jpg',
@@ -55,7 +55,7 @@ export class LandscapeComponent implements OnInit {
       id: 5,
       name: 'Chùa Một Cột',
       img: 'https://mytourcdn.com/upload_images/Image/Location/24_2_2015/9-Du-lich-chua-mot-cot-mytour-1.jpg',
-      area: 12,
+      area: 600,
       history: 'Chùa nổi trên mặt hồ là nhờ vào một hệ thống những thanh gỗ tạo thành cấu trúc rắn chắc hỗ trợ, trông giống như một bông hoa sen mọc thẳng lên từ hồ.',
       namePerson: 'Mạc Đĩnh Chi',
       imgPerson:'https://w1.trithucvn.net/wp-content/uploads/2017/08/00-4.jpg',
@@ -75,7 +75,7 @@ export class LandscapeComponent implements OnInit {
     dateDeath: null,
   }
   addNewLandscape(event){
-    let maxId=0;//max id gán bằng 0
+    let maxId=0;
     this.landscapes.forEach(function(val, index){
       if(val.id >= maxId){
         maxId=val.id;
